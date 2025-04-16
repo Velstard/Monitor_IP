@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Aprobar Usuarios{% endblock %}
+
+{% block content %}
+<h1 class="h2">Usuarios Pendientes de Aprobación</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre de Usuario</th>
+            <th>Correo Electrónico</th>
+            <th>Rol</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in pending_users %}
+        <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role }}</td>
+            <td>
+                <!-- Botón para aprobar -->
+                <form method="POST" action="/approve_users" style="display: inline;">
+                    <input type="hidden" name="user_id" value="{{ user.id }}">
+                    <button type="submit" class="btn btn-success">Aprobar</button>
+                </form>
+
+                <!-- Botón para rechazar -->
+                <form method="POST" action="/reject_user" style="display: inline;">
+                    <input type="hidden" name="user_id" value="{{ user.id }}">
+                    <button type="submit" class="btn btn-danger">Rechazar</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

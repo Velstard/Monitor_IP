@@ -1,0 +1,43 @@
+/* Contenedor de mensajes flash */
+.flash-message-container {
+    margin-bottom: 20px;
+}
+
+/* Estilo base para los mensajes flash */
+.flash-message {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    animation: fadeOut 5s forwards;
+}
+
+/* Estilo para mensajes de error */
+.flash-message.error {
+    background-color: #dc3545;
+}
+
+/* Estilo para mensajes de éxito */
+.flash-message.success {
+    background-color: #28a745;
+}
+
+/* Animación para desvanecer los mensajes */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+/*Esto es parte del registro */
