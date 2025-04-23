@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/e32a4d6e-c272-482b-a6d5-a8384d816683)
+
 Esta aplicación es un sistema de monitoreo IP que está programada para monitorear todos los puertos que se conectan mediante una dirección IP. Siempre y cuando sea capaz de dar y recibir paquetes Y Este conectada a la misma red podrás ser monitoreada. 
 
  DB.
